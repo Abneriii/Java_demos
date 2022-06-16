@@ -149,7 +149,7 @@ public class DataStructure {
         ds.printEven();
 
 
-        ds.print(ds.generateEvenIterator());
+//        ds.print(ds.generateEvenIterator());
 
         //2.自己这个解法有误
 //        ds.print(new DataStructureIterator() {
@@ -172,23 +172,39 @@ public class DataStructure {
 //            }
 //        });
 
-        ds.generateEvenIterator(new DataStructureIterator() {
-                                    private int nextIndex = 1;
+/*
+* 求解https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/nested-questions.html的2.b
+*
+* Invoke the method print(DataStructureIterator iterator) so that it prints elements that have an odd index value.
+* Use an anonymous class as the method's argument instead of an instance of the interface DataStructureIterator.
+*
+* 2022.6.16--错误代码逻辑记录--dai排查错误原因
+*
+*
+* */
+//        ds.print(new DataStructureIterator() {
+//            private int nextIndex = 1;
+//            private int[] arrayOfInts = new int[SIZE];
+//            public boolean hasNext() {
+//                return (nextIndex <= SIZE - 1);
+//            }
+//
+//            public Integer next() {
+//                // Record a value of an even index of the array
+//                Integer retValue = Integer.valueOf(arrayOfInts[nextIndex]);
+//
+//                // Get the next even element
+//                nextIndex += 2;
+//                return retValue;
+//            }
+//        });
 
-                                    public boolean hasNext() {
-                                        return (nextIndex <= SIZE - 1);
-                                    }
 
-                                    public Integer next() {
-                                        // Record a value of an even index of the array
-                                        Integer retValue = Integer.valueOf(arrayOfInts[nextIndex]);
 
-                                        // Get the next even element
-                                        nextIndex += 2;
-                                        return retValue;
-                                    }
-                                }
-        )
+        
+
+
+
 
 
         }
