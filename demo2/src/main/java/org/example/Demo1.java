@@ -1,7 +1,9 @@
-import entity.Person;
+package org.example;
+
+
+import org.example.Person;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
